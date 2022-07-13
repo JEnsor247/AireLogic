@@ -1,22 +1,13 @@
-﻿using AireLogic_TechTest.Artists;
-using AireLogic_TechTest.Interfaces;
-using AireLogic_TechTest.Model;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Script.Serialization;
 
 namespace AireLogic_TechTest
 {
     internal class Program
     {
         public static string ArtistName { get; set; }
-        public const int SongLimit = 50;
+        public const int SongLimit = 2;
         public static List<string> WorkTitles = new List<string>();
 
         static void Main(string[] args)
@@ -38,16 +29,23 @@ namespace AireLogic_TechTest
 
                     var songArtist = new Songs.Lyrics(artist.ArtistName);
                     var allSongsCounts = songArtist.GetAllLyricsCountsForSongs(WorkTitles);
+                    Console.WriteLine("");
+                    Console.WriteLine($"{"Song Title", -30} {"Count", -10}");
 
                     foreach (var item in allSongsCounts)
                     {
-                        Console.WriteLine($"{item.Key, -30} {item.Key, -10}");
+                        Console.WriteLine($"{item.Key, -30} {item.Value, -10}");
                     }
 
-                    var average = allSongsCounts.Sum(x => x.Value) / SongLimit;
-                    Console.WriteLine($"Given that we have used {allSongsCounts.Count} songs, the average word count is {average}");
+                    var average = Calculations.Average(allSongsCounts.Sum(x => x.Value), SongLimit);
+                    Console.WriteLine("");
+                    Console.WriteLine($"Given that we have used {allSongsCounts.Count} songs, the average word count is {average} words per song");
                 }
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Press Any key to Exit");
+            Console.ReadKey();
 
         }
     }

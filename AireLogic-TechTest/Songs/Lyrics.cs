@@ -3,8 +3,6 @@ using AireLogic_TechTest.Interfaces;
 using AireLogic_TechTest.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AireLogic_TechTest.Songs
@@ -51,10 +49,10 @@ namespace AireLogic_TechTest.Songs
                 if (response.IsSuccessStatusCode)
                 {
                     var result = ModelBase.Deserialize<Model.Songs>(response).Result;
-                    var Lyrics = result.Lyrics.Split(' ');
+                    string[] Lyrics = SplitLyricsByCharacter(result);
 
                     WordCount = Lyrics.Length;
-                    
+
                 }
                 else
                 {
@@ -63,6 +61,11 @@ namespace AireLogic_TechTest.Songs
             }
 
 
+        }
+
+        public static string[] SplitLyricsByCharacter(Model.Songs result, char splitChar = ' ')
+        {
+            return result.Lyrics.Split(splitChar);
         }
     }
 }

@@ -4,7 +4,6 @@ using AireLogic_TechTest.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AireLogic_TechTest.Works
@@ -38,24 +37,21 @@ namespace AireLogic_TechTest.Works
                     
                     // Potentially add in batching here to get all results from response, 
                     // instead of giving user the option
-                    var batchSize = 25;
+                    //var batchSize = 25;
 
-                    for (int y = 0; y < Math.Ceiling((decimal)initialResult.count / batchSize); y++)
-                    {
-                        var splitResponse = await ModelBase.GetResponse(client, query.QueryString(batchSize));
-                        var result = ModelBase.Deserialize<WorkModel>(response).Result;
-
-                        foreach (var item in result.works.Distinct().ToList())
-                        {
-                            SongTitles.Add(item.title);
-                        }
-                    }
-
-                    //foreach (var item in result.works.Distinct().ToList())
+                    //Console.WriteLine($"We found a total of {initialResult.Count} results. NOTE:Duplicates will be removed.");
+                    //for (int y = 0; y < Math.Ceiling((decimal)initialResult.Count / batchSize); y++)
                     //{
-                    //    SongTitles.Add(item.title);
-                    //}
-                    Console.WriteLine($"We found a total of {SongTitles.Count}");
+                    //    var splitResponse = await ModelBase.GetResponse(client, query.QueryString(batchSize));
+                    //    var result = ModelBase.Deserialize<WorkModel>(response).Result;
+
+                        foreach (var item in initialResult.Works.Distinct().ToList())
+                        {
+                            SongTitles.Add(item.Title);
+                            Console.WriteLine($"Adding Song {item.Title} to our process list");
+                        }
+                 //   }
+                    Console.WriteLine($"Now processing the Lyrics");
                 }
                 else
                 {

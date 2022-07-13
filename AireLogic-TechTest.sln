@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AireLogic-TechTest", "AireLogic-TechTest\AireLogic-TechTest.csproj", "{CD91FB45-FA2B-40F9-979A-E9DEB6F9E647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AireLogic-TechTest.Model", "AireLogic-TechTest.Model\AireLogic-TechTest.Model.csproj", "{DF627856-D223-482F-B2A1-8F3DF0F141C0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AireLogic-TechTest.Tests", "AireLogic-TechTest.Tests\AireLogic-TechTest.Tests.csproj", "{486BC148-3BC5-443B-A92A-E0AEB237D0F1}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{CD91FB45-FA2B-40F9-979A-E9DEB6F9E647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD91FB45-FA2B-40F9-979A-E9DEB6F9E647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD91FB45-FA2B-40F9-979A-E9DEB6F9E647}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF627856-D223-482F-B2A1-8F3DF0F141C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF627856-D223-482F-B2A1-8F3DF0F141C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF627856-D223-482F-B2A1-8F3DF0F141C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF627856-D223-482F-B2A1-8F3DF0F141C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{486BC148-3BC5-443B-A92A-E0AEB237D0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{486BC148-3BC5-443B-A92A-E0AEB237D0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{486BC148-3BC5-443B-A92A-E0AEB237D0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU

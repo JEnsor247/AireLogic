@@ -50,6 +50,20 @@
     <Compile Include="Artists\Artist.cs" />
     <Compile Include="Artists\ArtistQuery.cs" />
     <Compile Include="Artists\ArtistRequest.cs" />
+    <Compile Include="Calculations.cs" />
+    <Compile Include="Model\Area.cs" />
+    <Compile Include="Model\Artist.cs" />
+    <Compile Include="Model\ArtistModel.cs" />
+    <Compile Include="Model\BeginArea.cs" />
+    <Compile Include="Model\LifeSpan.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\Recording.cs" />
+    <Compile Include="Model\Relation.cs" />
+    <Compile Include="Model\Songs.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="Model\Work.cs" />
+    <Compile Include="Model\WorkModel.cs" />
+    <Compile Include="Model\Alias.cs" />
     <Compile Include="Songs\LyricsQuery.cs" />
     <Compile Include="Works\WorkQuery.cs" />
     <Compile Include="HttpBase.cs" />
@@ -65,12 +79,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AireLogic-TechTest.Model\AireLogic-TechTest.Model.csproj">
-      <Project>{DF627856-D223-482F-B2A1-8F3DF0F141C0}</Project>
-      <Name>AireLogic-TechTest.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
