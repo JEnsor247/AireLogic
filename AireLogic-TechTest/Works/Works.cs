@@ -48,10 +48,10 @@ namespace AireLogic_TechTest.Works
                         foreach (var item in initialResult.Works.Distinct().ToList())
                         {
                             SongTitles.Add(item.Title);
-                            Console.WriteLine($"Adding Song {item.Title} to our process list");
+                            Console.WriteLine($"Adding Song \"{item.Title}\" to our process list");
                         }
                  //   }
-                    Console.WriteLine($"Now processing the Lyrics");
+                    Console.WriteLine($"Now processing lyrics for the songs");
                 }
                 else
                 {

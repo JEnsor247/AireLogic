@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AireLogic_TechTest.Songs;
+﻿using AireLogic_TechTest.Songs;
 using FluentAssertions;
 using NUnit.Framework;
 

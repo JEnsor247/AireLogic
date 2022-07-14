@@ -18,6 +18,7 @@ namespace AireLogic_TechTest.Artists
 
         public string QueryString(int offset)
         {
+            // Not ideal to have this, look to alter the interface to make it more suitable for all
             throw new System.NotImplementedException();
         }
     }

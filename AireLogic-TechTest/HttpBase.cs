@@ -17,7 +17,5 @@ namespace AireLogic_TechTest
             HttpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("TechTest", "0.0.1"));
 
         }
-
-
     }
 }
